@@ -281,7 +281,10 @@ export default function Page() {
               className="flex flex-col items-center p-6 bg-blue-500 rounded-xl shadow-lg cursor-pointer text-white"
             >
               <Image src={o.image} alt={o.key} width={128} height={128} />
-              <h3 className="text-xl font-semibold mt-4">{t[o.key]}</h3>
+              <h3 className="text-xl font-semibold mt-4">
+  {t[o.key as keyof Translation]}
+</h3>
+
             </div>
           ))}
         </section>
